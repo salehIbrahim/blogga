@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(function(){
 
        $.getJSON("http://ip-api.com/json/", function (data) {
              var str = data.isp;
