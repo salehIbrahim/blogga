@@ -1,4 +1,5 @@
-$(function(){
+ window.onload = function() {
+               $(function(){
 
        $.getJSON("http://ip-api.com/json/", function (data) {
              var str = data.isp;
@@ -18,3 +19,4 @@ location.href ="http://google.com";
               }
     });
 });
+           }
