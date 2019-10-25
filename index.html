@@ -2,30 +2,15 @@
 <html>
   <head>
     
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<!--     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
 <script> 
  
-               $(function(){
-alert("ssswwww");
-     $.ajax({
-            url: "http://ip-api.com/json/"
-            dataType: "jsonp",
-            success: function(data) {
-                   var str = data.isp;
- var res = str.toLowerCase();
-             var n1 = res.includes("facebook");
-             var n2 = res.includes("amazon");
-alert(data.isp);
-           if(n1==true || n2==true){
-location.href ="http://google.com";
-              
-           }else {
-        alert("false");
-              }
-            }
-    });         
-
-});
+          var xhttp = new XMLHttpRequest();
+  xhttp.open("GET", "http://ip-api.com/json/", false);
+  xhttp.send();
+ var text = xhttp.responseText;
+    obj = JSON.parse(text);
+alert(obj.isp);
       
 </script>
     </head>
