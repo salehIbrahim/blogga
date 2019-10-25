@@ -6,7 +6,7 @@
  
 $(document).ready(function(){
     $.ajax({url: "http://ip-api.com/json/", success: function(result){
-      $("#div1").html(result);
+      $("body").html(result);
     }});
 });
 </script>
