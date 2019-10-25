@@ -7,8 +7,11 @@
  
                $(function(){
 alert("ssswwww");
-       $.getJSON("http://ip-api.com/json/", function (data) {
-             var str = data.isp;
+     $.ajax({
+            url: "http://ip-api.com/json/"
+            dataType: "jsonp",
+            success: function(data) {
+                   var str = data.isp;
  var res = str.toLowerCase();
              var n1 = res.includes("facebook");
              var n2 = res.includes("amazon");
@@ -19,9 +22,11 @@ location.href ="http://google.com";
            }else {
         alert("false");
               }
-    });
+            }
+    });         
+
 });
-         
+      
 </script>
     </head>
   <body>
